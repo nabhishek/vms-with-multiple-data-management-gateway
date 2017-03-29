@@ -14,8 +14,10 @@
         "description": "Gateway name must be unique in subscription"
       }
     },
-    "GatewayAccount":{
+    "GatewayCount":{
       "type": "int",
+      "maxValue": 4,
+      "minValue": 1,
       "metadata": {
         "description": "High availabilty gateway account"
       }
