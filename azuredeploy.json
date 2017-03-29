@@ -14,12 +14,12 @@
         "description": "Gateway name must be unique in subscription"
       }
     },
-    "GatewayCount":{
+    "GatewayNodeCount":{
       "type": "int",
       "maxValue": 4,
       "minValue": 1,
       "metadata": {
-        "description": "High availabilty gateway account"
+        "description": "the node count is between 1 and 4."
       }
     },
     "adminUserName": {
@@ -142,7 +142,7 @@
       ],
       "copy": { 
         "name": "vmcopy", 
-        "count": "[parameters('GatewayAccount')]" 
+        "count": "[parameters('GatewayNodeCount')]" 
       },
       "properties": {
         "mode": "incremental",
