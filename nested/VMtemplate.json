@@ -106,7 +106,7 @@
           "osDisk": {
             "name": "osdisk",
             "vhd": {
-              "uri": "[concat(reference(resourceId('Microsoft.Storage/storageAccounts/', parameters('storageAccountName'))).primaryEndpoints.blob)]"
+              "uri": "[concat('https://', parameters('storageAccountName'), '.blob.core.windows.net/','vhds/osdisk-', parameters('virtualMachineName'), '.vhd')]"
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
@@ -122,7 +122,7 @@
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": "true",
-            "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts/', parameters('storageAccountName'))).primaryEndpoints.blob]"
+            "storageUri": "[concat('https://', parameters('storageAccountName'), '.blob.core.windows.net/')]"
           }
         }
       },

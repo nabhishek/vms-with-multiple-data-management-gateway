@@ -124,7 +124,7 @@
         "[resourceId('Microsoft.DataFactory/dataFactories/gateways', parameters('existingDataFactoryName'), parameters('GatewayName'))]"
       ],
       "sku": {
-        "name": "Premium_LRS"
+        "name": "Standard_LRS"
       },
       "kind": "Storage",
       "properties": {}
